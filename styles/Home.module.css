@@ -5,7 +5,11 @@
   position: relative;
   overflow: hidden;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 
 .backgroundImage {
   background-image: url("../public/assets//background//in-move-bg.jpg");
