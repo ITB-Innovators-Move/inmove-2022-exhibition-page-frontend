@@ -9,6 +9,7 @@ import Lottie from "react-lottie";
 import animationData from "../public/assets/welcome/loading-animation.json";
 
 import Welcome from "../pages/welcome";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -61,6 +62,7 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             >
+              <Navbar/>
               <Welcome />
             </motion.div>
           )}
