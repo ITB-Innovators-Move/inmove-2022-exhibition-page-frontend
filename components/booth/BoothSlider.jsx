@@ -12,6 +12,8 @@ import styles from "../../styles/booth/Booth.module.css";
 import imageCard from "../../public/assets/carousel/6.jpg";
 import imageCard2 from "../../public/assets/carousel/5.png";
 
+import Link from "next/link";
+
 const boothData = [
   {
     index: 0,
@@ -91,7 +93,9 @@ export default function App() {
                 className={styles.SlideImage}
               />
               <h3 className={styles.Heading}>{data.title}</h3>
-              <button className={styles.SlideButton}>View More</button>
+              <button className={styles.SlideButton}>
+                <Link href='/display'>View More</Link>
+              </button>
             </SwiperSlide>
           );
         })}

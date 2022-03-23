@@ -5,17 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import BusinessImage from "../../public/assets/home/Business.png";
 import InnovationImage from "../../public/assets/home/Innovation.png";
+import Header from "../../components/header/Header";
 
 const index = () => {
   return (
     <div className={styles.container}>
+      <Header />
+
       <div className="mainTitle">
-        <h1>Visit 80+ Research, Innovation, Technology Booths</h1>
+        <h1>Visit 20+ Research, Innovation, Technology Booths</h1>
       </div>
 
-
       <div className={styles.cardWrapper}>
-
         <div className={styles.cardContainer}>
           <div className={styles.BusinessImage}>
             <Image
@@ -25,11 +26,11 @@ const index = () => {
               height={300}
             />
           </div>
-          <button className={styles.cardButton}>
-            <Link href="booth/business-plan" passHref>
+          <Link href="/booth/business-plan" passHref>
+            <button className={styles.cardButton}>
               <p>Business Plan Competition</p>
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
 
         <div className={styles.cardContainer}>
@@ -41,13 +42,12 @@ const index = () => {
               height={300}
             />
           </div>
-          <button className={styles.cardButton}>
-            <Link href="/booth/innovation" passHref>
+          <Link href="/booth/innovation" passHref>
+            <button className={styles.cardButton}>
               <p>Innovation Competition</p>
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
-
       </div>
     </div>
   );

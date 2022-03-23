@@ -1,0 +1,41 @@
+.displayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+    /* background: rgb(32,13,43); */
+    background-image: url('../../public/assets/background/in-move-bg-blurred.jpg');
+    /* background: linear-gradient(90deg, rgba(32,13,43,0.5) 0%, rgba(53,13,48,0.5) 100%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.displayImg {}
+
+.displayTitle {
+    font-size: 2rem;
+}
+
+.displayDesc {
+    font-size: 1rem;
+    width: 70vw;
+}
+
+.displayButton{
+    border: none;
+    background-color: #ca0079;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.displayButton:hover{
+    background-color: #dd2091;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(216, 241, 255, 0.247);
+}
