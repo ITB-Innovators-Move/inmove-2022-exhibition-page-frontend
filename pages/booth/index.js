@@ -11,15 +11,20 @@ const index = () => {
   return (
     <div className={styles.container}>
       <Header />
-
-      <div className="mainTitle">
-        <h1>Visit 20+ Research, Innovation, Technology Booths</h1>
-      </div>
+      <h1 className={styles.mainTitle}>
+        Visit 20+ Research, Innovation, Technology Booths
+      </h1>
 
       <div className={styles.cardWrapper}>
         <div className={styles.cardContainer}>
           <div className={styles.BusinessImage}>
-            <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png'} alt="" style={{ width: "20rem" }} />
+            <img
+              src={
+                "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png"
+              }
+              alt=""
+              style={{ width: "20rem" }}
+            />
           </div>
           <Link href="/booth/business-plan" passHref>
             <button className={styles.cardButton}>
@@ -29,9 +34,14 @@ const index = () => {
         </div>
 
         <div className={styles.cardContainer}>
-
           <div className={styles.BusinessImage}>
-            <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png'} alt="" style={{ width: "20rem" }} />
+            <img
+              src={
+                "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png"
+              }
+              alt=""
+              style={{ width: "20rem" }}
+            />
           </div>
 
           <Link href="/booth/innovation" passHref>

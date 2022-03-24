@@ -44,19 +44,19 @@ const BusinessPlan = () => {
           clickable: true,
         }}
         breakpoints={{
-          200: {
-            slidesPerView: 1,
-            spaceBetween: 5,
-          },
-          640: {
+          400: {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+          800: {
+            slidesPerView: 1,
+            spaceBetween: 30,
           },
-          1024: {
+          1300: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1500: {
             slidesPerView: 3,
             spaceBetween: 30,
           },
@@ -66,16 +66,16 @@ const BusinessPlan = () => {
           return (
             <SwiperSlide className={styles.SlideItem} key={post.id}>
               <div className={styles.ImageCardSize}>
-                <img
-                  src={post.attributes.link}
-                  alt="image-display"
-                  className={styles.SlideImage}
-                  style={{ 
-                    maxHeight: "20rem",
-                   maxWidth: "20rem",
-                   borderRadius:"4px"
-                   }}
-                />
+              <img
+                src={post.attributes.link}
+                alt="image-display"
+                className={styles.SlideImage}
+                // style={{
+                //   maxHeight: "20rem",
+                //  maxWidth: "20rem",
+                //  borderRadius:"4px"
+                //  }}
+              />
                 {/* <Image
                   src={post.attributes.link}
                   alt="image"

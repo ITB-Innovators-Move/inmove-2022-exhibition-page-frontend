@@ -9,12 +9,11 @@ const Display = ({ inventor }) => {
   return (
     <div className={styles.displayContainer}>
       <Header />
-      <pre>{JSON.stringify(inventor, null, 2)}</pre>
-      <div className={styles.displayImg}>
-        <img src={inventor.attributes.link} alt="" />
-      </div>
+      {/* <pre>{JSON.stringify(inventor, null, 2)}</pre> */}
       <h1>{inventor.attributes.title}</h1>
-      <p>{inventor.attributes.desc}</p>
+        <img src={inventor.attributes.link} alt="" className={styles.displayImg} />
+      
+      <p className={styles.displayDesc}>{inventor.attributes.desc}</p>
       <button className={styles.displayButton}>See More</button>
     </div>
   );
@@ -23,7 +22,9 @@ const Display = ({ inventor }) => {
 export async function getServerSideProps({ params }) {
   const {
     data: { data: inventor },
-  } = await axios.get(`https://inmove-backend-22.herokuapp.com/api/inventors/${params.id}`);
+  } = await axios.get(
+    `https://inmove-backend-22.herokuapp.com/api/inventors/${params.id}`
+  );
 
   return {
     props: {

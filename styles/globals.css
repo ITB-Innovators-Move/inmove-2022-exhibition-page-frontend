@@ -24,7 +24,7 @@ a {
 
 .swiper-slide {
   text-align: center;
-  font-size:10px;
+  font-size: 10px;
   /* background: #fff; */
 
   /* Center slide text vertically */
@@ -42,3 +42,10 @@ a {
   align-items: center; */
 }
 
+@media (max-width: 600px) {
+  .swiper {
+
+    width: 50%;
+    height: 50%;
+  }
+}

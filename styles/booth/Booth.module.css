@@ -7,7 +7,7 @@
     /* padding: 10rem; */
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 
 .mySwiper{
@@ -30,6 +30,8 @@
     -webkit-backdrop-filter: blur(4.8px);
     border: 1px solid rgba(255, 255, 255, 0.6);
     transition: all 1.2s ease-out;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -69,9 +71,9 @@
 
 
 .ImageCardSize {
-    position: relative;
-    height: 60vh;
-    width: 100%;
+    /* position: relative; */
+    /* height: 60vh; */
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +85,34 @@
 } */
 
 @media only screen and (max-width: 600px) {
-    .ImageCardSize {
-        height: 30rem;
+    /* .ImageCardSize {
+        height: 20%;
+    } */
+
+    .SlideImage{
+        max-height: 10rem;
+        max-width: 10rem;
     }
+
+    .SlideItem{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .SlideImage{
+        /* display: none; */
+        max-height: 20px;
+        max-width: 10px;
+    }
+}
+
+.SlideImage{
+    display: block;
+    max-height: 20rem;
+    max-width: 20rem;
+    border-radius: 4px;
+    height: auto;
+    width: auto;
 }

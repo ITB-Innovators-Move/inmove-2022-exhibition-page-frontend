@@ -46,3 +46,28 @@
     width: 200px;
     height: auto;
 }
+
+@media (max-width: 600px) {
+    .welcome {
+        padding: 1rem;
+
+
+
+    }
+
+    .welcomeLogo {
+        width: 4rem;
+    }
+
+    .welcomeTitle{
+        font-size: 1rem;
+    }
+
+    .welcomeButton{
+        font-size: 1rem;
+    }
+}
+
+.welcomeLogo {
+    width: 10rem;
+}
