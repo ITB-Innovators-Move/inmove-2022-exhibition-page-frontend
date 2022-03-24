@@ -20,7 +20,7 @@ import axios from "axios";
 
 async function fetchPosts() {
   const { data } = await axios.get(
-    "http://inmove-backend-22.herokuapp.com/api/inventors"
+    "https://inmove-backend-22.herokuapp.com/api/inventors"
   );
   console.log(data.data);
   return data.data;
