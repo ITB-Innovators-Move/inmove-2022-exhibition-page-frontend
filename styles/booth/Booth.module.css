@@ -68,3 +68,16 @@
 .mySwiper{
 
 }
+
+
+.ImageCardSize {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .ImageCardSize {
+        height: 30rem;
+    }
+}

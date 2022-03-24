@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "../../../styles/booth/Booth.module.css";
-import Slider from "../../../components/booth/BoothSlider";
 import Header from "../../../components/header/Header";
 
 import imageCard from "../../../public/assets/carousel/6.jpg";
@@ -15,102 +14,24 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-
-import api from "../../api/strapi";
+import { useQuery } from "react-query";
 
 import axios from "axios";
 
-async function fetchPosts(){
-  const {data} = await axios.get('http://localhost:1337/api/inventors')    
-  // const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')    
-  console.log(data.data)
-  return data.data
+async function fetchPosts() {
+  const { data } = await axios.get(
+    "http://inmove-backend-22.herokuapp.com/api/inventors"
+  );
+  console.log(data.data);
+  return data.data;
 }
 
-const boothData = [
-  {
-    index: 0,
-    title: "Sample Title 1",
-    image: imageCard,
-  },
-  {
-    index: 1,
-    title: "Filler text is text that shares some characteristics",
-    image: imageCard2,
-  },
-  {
-    index: 2,
-    title: "Filler text is text that shares some characteristics",
-    image: imageCard,
-  },
-  {
-    index: 3,
-    title: "Filler text is text that shares some characteristics",
-    image: imageCard2,
-  },
-  {
-    index: 4,
-    title: "Filler text is text that shares some characteristics",
-    image: imageCard,
-  },
-  {
-    index: 5,
-    title: "Filler text is text that shares some characteristics",
-    image: imageCard2,
-  },
-];
-
 const BusinessPlan = () => {
-  // const [posts, setPosts] = useState([]);
-
-  // const queryClient = useQueryClient();
-
-  // // Queries
-  // const query = useQuery("todos", getTodos);
-
-  // // Mutations
-  // const mutation = useMutation(postTodo, {
-  //   onSuccess: () => {
-  //     // Invalidate and refetch
-  //     queryClient.invalidateQueries("todos");
-  //   },
-  // });
-
-  // useEffect(() => {
-  //   console.log("use effect");
-  //   const fetchPosts = async () => {
-  //     try {
-  //       const response = await axios.get("http://localhost:1337/api/inventors");
-  //       setPosts(response.data);
-  //       console.log(posts);
-  //     } catch (err) {
-  //       if (err.response) {
-  //         console.log(err.response.data);
-  //         console.log(err.response.status);
-  //         console.log(err.response.headers);
-  //       } else {
-  //         console.log(`Err: ${err.message}`);
-  //       }
-  //     }
-  //   };
-  //   fetchPosts();
-  // });
-
-  // const {isLoading, error, boothDataFetch} = useQuery('fetchData', ()=>{
-  //   axios('http://localhost:1337/api/inventors')
-  // })
-
-  const {data, error, isError, isLoading} = useQuery('posts', fetchPosts)
-
-  
-
+  const { data, error, isError, isLoading } = useQuery("posts", fetchPosts);
   return (
     <div className={styles.container}>
       <Header />
       <h1 className={styles.titlePage}>Exhibition Title</h1>
-      {/* <Slider boothData={posts} /> */}
-
       <Swiper
         navigation={true}
         modules={[Navigation, Pagination]}
@@ -122,7 +43,6 @@ const BusinessPlan = () => {
           dynamicBullets: true,
           clickable: true,
         }}
-        // cssMode={true}
         breakpoints={{
           200: {
             slidesPerView: 1,
@@ -142,17 +62,29 @@ const BusinessPlan = () => {
           },
         }}
       >
-        {data?.map((post, index) => {
+        {data?.map((post) => {
           return (
-            <SwiperSlide className={styles.SlideItem} key={post.index}>
-              <Image
-                src={imageCard}
+            <SwiperSlide className={styles.SlideItem} key={post.id}>
+              {/* <Image
+                src={`http://localhost:1337${post.attributes.image.data[0].attributes.formats.medium.url}`}
                 alt="image"
                 className={styles.SlideImage}
-              />
+                width={100}
+                height={100}
+              /> */}
+              <div className={styles.ImageCardSize}>
+                <Image
+                  src={post.attributes.link}
+                  alt="image"
+                  className={styles.SlideImage}
+                  layout={"fill"}
+                  objectFit={"cover"}
+                />
+              </div>
+
               <h3 className={styles.Heading}>{post.attributes.title}</h3>
               <button className={styles.SlideButton}>
-                <Link href="/display">View More</Link>
+                <Link href={`/display/${post.id}`}>View More</Link>
               </button>
             </SwiperSlide>
           );
