@@ -70,7 +70,11 @@ const BusinessPlan = () => {
                   src={post.attributes.link}
                   alt="image-display"
                   className={styles.SlideImage}
-                  style={{width:'20rem'}}
+                  style={{ 
+                    maxHeight: "20rem",
+                   maxWidth: "20rem",
+                   borderRadius:"4px"
+                   }}
                 />
                 {/* <Image
                   src={post.attributes.link}
