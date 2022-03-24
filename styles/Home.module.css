@@ -8,7 +8,7 @@
 }
 
 .backgroundImage {
-  background-image: url("../public/assets//background//in-move-bg.jpg");
+  background-image: url("../public/assets/background/in-move-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,12 +38,10 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-
-
 }
 
 
-.title a {
+/* .title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -128,4 +126,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

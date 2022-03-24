@@ -5,11 +5,17 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <Image src="/assets/logo/logo-in-move.png" alt="site logo" width={128} height={77} />
+        <Image src="/assets/logo/logo-name-2.png" alt="site logo" height={60} width={138.35}/>
       </div>
-      <Link href="/"><a>Home</a></Link>
+      {/* <Link href="/"><a>ITBInMove  |  Exhibition</a></Link> */}
+      <div className="hamburger">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+      {/* <Link href="/"><a>Home</a></Link>
       <Link href="/about"><a>About</a></Link>
-      <Link href="/ninjas/"><a>Ninja Listing</a></Link>
+      <Link href="/ninjas/"><a>Ninja Listing</a></Link> */}
     </nav>
   );
 }
