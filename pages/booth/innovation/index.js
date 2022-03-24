@@ -35,7 +35,7 @@ const BusinessPlan = () => {
       <Swiper
         navigation={true}
         modules={[Navigation, Pagination]}
-        className="mySwiper"
+        className={styles.mySwiper}
         slidesPerView={3}
         loop={true}
         spaceBetween={30}

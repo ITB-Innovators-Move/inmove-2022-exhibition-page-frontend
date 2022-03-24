@@ -65,13 +65,6 @@ const BusinessPlan = () => {
         {data?.map((post) => {
           return (
             <SwiperSlide className={styles.SlideItem} key={post.id}>
-              {/* <Image
-                src={`http://localhost:1337${post.attributes.image.data[0].attributes.formats.medium.url}`}
-                alt="image"
-                className={styles.SlideImage}
-                width={100}
-                height={100}
-              /> */}
               <div className={styles.ImageCardSize}>
                 <Image
                   src={post.attributes.link}

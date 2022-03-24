@@ -4,9 +4,10 @@
     background-size: cover;
     background-position: center;
     margin: 0;
-    padding: 0;
+    /* padding: 10rem; */
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .mySwiper{
@@ -72,6 +73,11 @@
     height: 60vh;
     width: 100%;
 }
+
+/* .mySwiper{
+    position: absolute;
+    display: none;
+} */
 
 @media only screen and (max-width: 600px) {
     .ImageCardSize {
