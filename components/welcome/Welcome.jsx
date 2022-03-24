@@ -8,7 +8,8 @@ function welcome() {
   return (
     <div className={styles.welcome}>
       <div className={styles.welcomeLogo}>
-        <Image src={Logo} alt="in move logo" />
+        <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145167/Website/logo-in-move_ksggeb.png'} alt="" style={{width:"12rem"}} />
+        {/* <Image src={Logo} alt="in move logo" /> */}
       </div>
       <p className={styles.welcomeTitle}>Welcome to ITB In Move Exhibitions</p>
       <div></div>{" "}

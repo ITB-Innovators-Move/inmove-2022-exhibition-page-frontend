@@ -35,7 +35,7 @@ const BusinessPlan = () => {
       <Swiper
         navigation={true}
         modules={[Navigation, Pagination]}
-        className={styles.mySwiper}
+        className="mySwiper"
         slidesPerView={3}
         loop={true}
         spaceBetween={30}
@@ -66,12 +66,11 @@ const BusinessPlan = () => {
           return (
             <SwiperSlide className={styles.SlideItem} key={post.id}>
               <div className={styles.ImageCardSize}>
-                <Image
+                <img
                   src={post.attributes.link}
-                  alt="image"
+                  alt="image-display"
                   className={styles.SlideImage}
-                  layout={"fill"}
-                  objectFit={"cover"}
+                  style={{width:'20rem'}}
                 />
               </div>
 

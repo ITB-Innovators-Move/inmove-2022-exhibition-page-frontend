@@ -11,7 +11,7 @@ const Display = ({ inventor }) => {
       <Header />
       <pre>{JSON.stringify(inventor, null, 2)}</pre>
       <div className={styles.displayImg}>
-        <Image src={displayImage} alt="display img" />
+        <img src={inventor.attributes.link} alt="" />
       </div>
       <h1>{inventor.attributes.title}</h1>
       <p>{inventor.attributes.desc}</p>

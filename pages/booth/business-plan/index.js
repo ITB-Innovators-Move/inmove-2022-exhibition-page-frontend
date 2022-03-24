@@ -66,13 +66,19 @@ const BusinessPlan = () => {
           return (
             <SwiperSlide className={styles.SlideItem} key={post.id}>
               <div className={styles.ImageCardSize}>
-                <Image
+                <img
+                  src={post.attributes.link}
+                  alt="image-display"
+                  className={styles.SlideImage}
+                  style={{width:'20rem'}}
+                />
+                {/* <Image
                   src={post.attributes.link}
                   alt="image"
                   className={styles.SlideImage}
                   layout={"fill"}
                   objectFit={"cover"}
-                />
+                /> */}
               </div>
 
               <h3 className={styles.Heading}>{post.attributes.title}</h3>

@@ -10,7 +10,8 @@ const index = () => {
       <Header />
 
       <div className={styles.displayImg}>
-        <Image src={displayImage} alt="display img" />
+        <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648129842/cld-sample.jpg'} alt="" />
+        {/* <Image src={displayImage} alt="display img" /> */}
       </div>
       <h1 className={styles.displayTitle}>FIABLE (Fish Attractor Portable)</h1>
       <p className={styles.displayDesc}>

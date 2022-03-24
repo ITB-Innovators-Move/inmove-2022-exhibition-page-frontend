@@ -51,9 +51,7 @@ function Header() {
   return (
     <div className={` ${styles.nav} ${show && styles.navBlue}`}>
       <Link href="/booth" passHref>
-        {/* <img src={logoSI} alt="" /> */}
-        {/* ITB Innovators Move */}
-        <Image src={HeaderLogo} alt="header-logo" className={styles.HeaderLogoImg}/>
+        <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145167/Website/exhi-header-logo_ld75ch.png'} alt="header-logo" className={styles.HeaderLogoImg}/> 
       </Link>
       <button
         className={` ${styles.menu} ${openedStyle}`}

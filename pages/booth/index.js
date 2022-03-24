@@ -19,12 +19,7 @@ const index = () => {
       <div className={styles.cardWrapper}>
         <div className={styles.cardContainer}>
           <div className={styles.BusinessImage}>
-            <Image
-              src={BusinessImage}
-              alt="Business Image"
-              width={300}
-              height={300}
-            />
+            <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png'} alt="" style={{ width: "20rem" }} />
           </div>
           <Link href="/booth/business-plan" passHref>
             <button className={styles.cardButton}>
@@ -34,14 +29,11 @@ const index = () => {
         </div>
 
         <div className={styles.cardContainer}>
+
           <div className={styles.BusinessImage}>
-            <Image
-              src={InnovationImage}
-              alt="Business Image"
-              width={300}
-              height={300}
-            />
+            <img src={'https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png'} alt="" style={{ width: "20rem" }} />
           </div>
+
           <Link href="/booth/innovation" passHref>
             <button className={styles.cardButton}>
               <p>Innovation Competition</p>
