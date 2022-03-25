@@ -25,10 +25,10 @@ import axios from "axios";
 
 async function fetchPosts() {
   const { data } = await axios.get(
-    "https://inmove-backend-22.herokuapp.com/api/inventors"
+    "http://inmove-backend-22.herokuapp.com/api/categories?fields=name&populate=inventors"
   );
-  console.log(data.data);
-  return data.data;
+  // console.log(data.data[0].attributes.inventors.data);
+  return data.data[0].attributes.inventors.data;
 }
 
 const BusinessPlan = () => {
@@ -81,7 +81,7 @@ const BusinessPlan = () => {
             y: -50,
           }}
         >
-          <h1 className={styles.titlePage}>Exhibition Title</h1>
+          <h1 className={styles.titlePage}>Business Plan Competition</h1>
           <Swiper
             navigation={true}
             modules={[Navigation, Pagination]}
