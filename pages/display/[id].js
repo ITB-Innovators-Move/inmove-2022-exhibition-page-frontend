@@ -26,7 +26,7 @@ const Display = ({ inventor }) => {
         className={styles.mainContainer}
       >
         {/* <pre>{JSON.stringify(inventor, null, 2)}</pre> */}
-        <h1>{inventor.attributes.title}</h1>
+        <h1 className={styles.DisplayTitle}>{inventor.attributes.title}</h1>
         <img
           src={inventor.attributes.link}
           alt=""
@@ -34,7 +34,7 @@ const Display = ({ inventor }) => {
         />
 
         <p className={styles.displayDesc}>{inventor.attributes.desc}</p>
-        <button className={styles.displayButton}>See More</button>
+        {/* <button className={styles.displayButton}>See More</button> */}
       </motion.div>
     </motion.div>
   );

@@ -67,6 +67,24 @@ const index = () => {
               </button>
             </Link>
           </div>
+
+          <div className={styles.cardContainer}>
+            <div className={styles.BusinessImage}>
+              <img
+                src={
+                  "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png"
+                }
+                alt=""
+                style={{ width: "18rem" }}
+              />
+            </div>
+
+            <Link href="/booth/hmj" passHref>
+              <button className={styles.cardButton}>
+                <p>Himpunan Mahasiswa Jurusan</p>
+              </button>
+            </Link>
+          </div>
         </div>
       </motion.div>
     </div>
