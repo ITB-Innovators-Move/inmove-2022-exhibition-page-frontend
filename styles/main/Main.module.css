@@ -70,4 +70,11 @@
     .mainTitle{
         font-size:1.5rem;
     }
+
+    .cardContainer{
+        padding: 1rem;
+    }
+    .container{
+        padding-top: 10rem;
+    }
 }

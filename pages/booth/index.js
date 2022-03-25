@@ -29,7 +29,7 @@ const index = () => {
         }}
       >
         <h1 className={styles.mainTitle}>
-          Visit 20+ Research, Innovation, Technology Booths
+          Visit Research, Innovation, Technology Booths
         </h1>
 
         <div className={styles.cardWrapper}>
@@ -40,7 +40,7 @@ const index = () => {
                   "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png"
                 }
                 alt=""
-                style={{ width: "20rem" }}
+                style={{ width: "18rem" }}
               />
             </div>
             <Link href="/booth/business-plan" passHref>
@@ -57,7 +57,7 @@ const index = () => {
                   "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png"
                 }
                 alt=""
-                style={{ width: "20rem" }}
+                style={{ width: "18rem" }}
               />
             </div>
 

@@ -11,15 +11,16 @@ const Display = ({ inventor }) => {
   return (
     <motion.div
       className={styles.displayContainer}
+      initial={{ opacity: 0 }}
+      animate={{ y: -10, opacity: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.3,
+        ease: "easeInOut",
+      }}
       exit={{
         opacity: 0,
         y: -50,
-      }}
-      transition={{
-        type: "spring",
-        mass: 0.9,
-        stiffness: 30,
-        duration: 0.01,
       }}
     >
       <Header />
