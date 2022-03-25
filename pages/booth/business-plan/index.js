@@ -1,6 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "../../../styles/booth/Booth.module.css";
 import Header from "../../../components/header/Header";
+import Typewriter from "typewriter-effect";
+// import TypeWriterEffect from "react-typewriter-effect";
+// import Typewriter from 'react-simple-typewriter'
+// import TypeWriter from "react-typewriter";
+// import 'react-simple-typewriter/dist/index.css'
 
 import imageCard from "../../../public/assets/carousel/6.jpg";
 import imageCard2 from "../../../public/assets/carousel/5.png";
@@ -63,9 +68,20 @@ const BusinessPlan = () => {
           <div className={styles.BoothLottie}>
             <Lottie options={defaultOptions} height={250} width={250} />
           </div>
-          <h1 style={{ color: "white", fontSize: "1rem", textAlign: "center" }}>
-            Loading Content...
-          </h1>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString('<span style="color: white;">Loading . . . </span>')
+                .start()
+                .pauseFor(2500)
+                .deleteAll()
+                .start();
+            }}
+            // cursor={{white}}
+            // styles={{ color: "white" }}
+            // cursorClassName={styles.BoothCursor}
+            // cursor={"/"}
+          />
         </div>
       ) : (
         <motion.div

@@ -9,31 +9,33 @@ import { motion } from "framer-motion";
 
 const Display = ({ inventor }) => {
   return (
-    <motion.div
-      className={styles.displayContainer}
-      initial={{ opacity: 0 }}
-      animate={{ y: -10, opacity: 1 }}
-      transition={{
-        duration: 0.8,
-        delay: 0.3,
-        ease: "easeInOut",
-      }}
-      exit={{
-        opacity: 0,
-        y: -50,
-      }}
-    >
+    <motion.div className={styles.displayContainer}>
       <Header />
-      {/* <pre>{JSON.stringify(inventor, null, 2)}</pre> */}
-      <h1>{inventor.attributes.title}</h1>
-      <img
-        src={inventor.attributes.link}
-        alt=""
-        className={styles.displayImg}
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ y: -10, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.3,
+          ease: "easeInOut",
+        }}
+        exit={{
+          opacity: 0,
+          y: -50,
+        }}
+        className={styles.mainContainer}
+      >
+        {/* <pre>{JSON.stringify(inventor, null, 2)}</pre> */}
+        <h1>{inventor.attributes.title}</h1>
+        <img
+          src={inventor.attributes.link}
+          alt=""
+          className={styles.displayImg}
+        />
 
-      <p className={styles.displayDesc}>{inventor.attributes.desc}</p>
-      <button className={styles.displayButton}>See More</button>
+        <p className={styles.displayDesc}>{inventor.attributes.desc}</p>
+        <button className={styles.displayButton}>See More</button>
+      </motion.div>
     </motion.div>
   );
 };

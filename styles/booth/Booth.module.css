@@ -1,3 +1,4 @@
+
 .container {
     background-image: url("../../public/assets//background/in-move-bg-blurred.jpg");
     background-repeat: no-repeat;
@@ -141,4 +142,14 @@
 
 .BoothLottie{
     margin:  0 0 0 3rem;
+}
+
+.BoothLoader{
+    color: white;
+}
+
+.BoothCursor{
+    color: white;
+    background-color: white;
+    display: none;
 }

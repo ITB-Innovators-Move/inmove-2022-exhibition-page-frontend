@@ -34,6 +34,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s ease;
+    margin: 1rem 0 0 0;
 }
 
 .welcomeButton:hover {
@@ -59,15 +60,59 @@
         width: 4rem;
     }
 
-    .welcomeTitle{
+    .welcomeTitle {
         font-size: 1rem;
     }
 
-    .welcomeButton{
+    .welcomeButton {
         font-size: 1rem;
     }
 }
 
 .welcomeLogo {
     width: 10rem;
+}
+
+.welcomeGuest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeGuestForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeInput {
+    border: 1px solid #ca0079 ;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    margin: 0.3rem;
+    outline: 0;
+    width: 18rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* background-color: #b3dbfb; */
+    background: none;
+    color: white;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    transition: 0.5s ease;
+}
+
+.welcomeInput:focus {
+    border: none;
+    border: 1px solid #ca0079 ;
+    /* background-color: #deeefc; */
+    color: white;
+    box-shadow: 0px 0px 15px rgba(216, 241, 255, 0.247);
+}
+
+.welcomeInput::placeholder{
+    color: rgb(255, 255, 255);
 }
