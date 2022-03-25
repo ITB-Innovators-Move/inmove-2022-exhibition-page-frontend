@@ -2,10 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "../../../styles/booth/Booth.module.css";
 import Header from "../../../components/header/Header";
 import Typewriter from "typewriter-effect";
-// import TypeWriterEffect from "react-typewriter-effect";
-// import Typewriter from 'react-simple-typewriter'
-// import TypeWriter from "react-typewriter";
-// import 'react-simple-typewriter/dist/index.css'
 
 import imageCard from "../../../public/assets/carousel/6.jpg";
 import imageCard2 from "../../../public/assets/carousel/5.png";
@@ -18,7 +14,7 @@ import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { motion } from "framer-motion";
 
