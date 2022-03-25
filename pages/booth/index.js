@@ -7,50 +7,68 @@ import BusinessImage from "../../public/assets/home/Business.png";
 import InnovationImage from "../../public/assets/home/Innovation.png";
 import Header from "../../components/header/Header";
 
+import Lottie from "react-lottie";
+import animationData from "../../public/assets/welcome/loading-page.json";
+import { motion } from "framer-motion";
+
 const index = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <h1 className={styles.mainTitle}>
-        Visit 20+ Research, Innovation, Technology Booths
-      </h1>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ y: -10, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.3,
+          ease: "easeInOut",
+        }}
+        exit={{
+          opacity: 0,
+          y: -50,
+        }}
+      >
+        <h1 className={styles.mainTitle}>
+          Visit 20+ Research, Innovation, Technology Booths
+        </h1>
 
-      <div className={styles.cardWrapper}>
-        <div className={styles.cardContainer}>
-          <div className={styles.BusinessImage}>
-            <img
-              src={
-                "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png"
-              }
-              alt=""
-              style={{ width: "20rem" }}
-            />
+        <div className={styles.cardWrapper}>
+          <div className={styles.cardContainer}>
+            <div className={styles.BusinessImage}>
+              <img
+                src={
+                  "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Business_s92jfp.png"
+                }
+                alt=""
+                style={{ width: "20rem" }}
+              />
+            </div>
+            <Link href="/booth/business-plan" passHref>
+              <button className={styles.cardButton}>
+                <p>Business Plan Competition</p>
+              </button>
+            </Link>
           </div>
-          <Link href="/booth/business-plan" passHref>
-            <button className={styles.cardButton}>
-              <p>Business Plan Competition</p>
-            </button>
-          </Link>
-        </div>
 
-        <div className={styles.cardContainer}>
-          <div className={styles.BusinessImage}>
-            <img
-              src={
-                "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png"
-              }
-              alt=""
-              style={{ width: "20rem" }}
-            />
+          <div className={styles.cardContainer}>
+            <div className={styles.BusinessImage}>
+              <img
+                src={
+                  "https://res.cloudinary.com/djmwc8sxk/image/upload/v1648145184/Website/Innovation_kt879c.png"
+                }
+                alt=""
+                style={{ width: "20rem" }}
+              />
+            </div>
+
+            <Link href="/booth/innovation" passHref>
+              <button className={styles.cardButton}>
+                <p>Innovation Competition</p>
+              </button>
+            </Link>
           </div>
-
-          <Link href="/booth/innovation" passHref>
-            <button className={styles.cardButton}>
-              <p>Innovation Competition</p>
-            </button>
-          </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

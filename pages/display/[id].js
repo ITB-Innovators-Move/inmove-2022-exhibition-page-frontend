@@ -5,17 +5,35 @@ import styles from "../../styles/display/Display.module.css";
 import Header from "../../components/header/Header";
 import axios from "axios";
 
+import { motion } from "framer-motion";
+
 const Display = ({ inventor }) => {
   return (
-    <div className={styles.displayContainer}>
+    <motion.div
+      className={styles.displayContainer}
+      exit={{
+        opacity: 0,
+        y: -50,
+      }}
+      transition={{
+        type: "spring",
+        mass: 0.9,
+        stiffness: 30,
+        duration: 0.01,
+      }}
+    >
       <Header />
       {/* <pre>{JSON.stringify(inventor, null, 2)}</pre> */}
       <h1>{inventor.attributes.title}</h1>
-        <img src={inventor.attributes.link} alt="" className={styles.displayImg} />
-      
+      <img
+        src={inventor.attributes.link}
+        alt=""
+        className={styles.displayImg}
+      />
+
       <p className={styles.displayDesc}>{inventor.attributes.desc}</p>
       <button className={styles.displayButton}>See More</button>
-    </div>
+    </motion.div>
   );
 };
 
