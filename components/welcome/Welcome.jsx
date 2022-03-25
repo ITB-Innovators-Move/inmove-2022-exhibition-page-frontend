@@ -3,27 +3,32 @@ import Image from "next/image";
 import Logo from "../../public/assets/logo/logo-in-move.png";
 import styles from "../../styles/welcome/Welcome.module.css";
 import Link from "next/link";
-import axios from 'axios';
-import Router from 'next/router'
+import axios from "axios";
+import Router from "next/router";
 import Typewriter from "typewriter-effect";
 
-
-const welcome = () => {
+const Welcome = () => {
   const [nama, setNama] = useState("");
   const [institusi, setInstitusi] = useState("");
-  const [msg, setMsg] = useState('');
+  const [msg, setMsg] = useState("");
+
+  let config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
 
   const Register = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:1337/api/guests', {
-        data:{
+      await axios.post("https://inmove-backend-22.herokuapp.com/api/guests", {
+        data: {
           nama: nama,
-          institusi: institusi
-        }
+          institusi: institusi,
+        },
       });
       Router.push("/booth");
-
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -70,6 +75,6 @@ const welcome = () => {
       </div>
     </div>
   );
-}
+};
 
-export default welcome;
+export default Welcome;

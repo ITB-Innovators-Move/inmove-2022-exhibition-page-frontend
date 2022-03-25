@@ -77,10 +77,6 @@ const BusinessPlan = () => {
                 .deleteAll()
                 .start();
             }}
-            // cursor={{white}}
-            // styles={{ color: "white" }}
-            // cursorClassName={styles.BoothCursor}
-            // cursor={"/"}
           />
         </div>
       ) : (

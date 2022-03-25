@@ -5,6 +5,8 @@ import Header from "../../../components/header/Header";
 import imageCard from "../../../public/assets/carousel/6.jpg";
 import imageCard2 from "../../../public/assets/carousel/5.png";
 
+import Typewriter from "typewriter-effect";
+
 import Lottie from "react-lottie";
 import animationData from "../../../public/assets/welcome/loading-page.json";
 
@@ -63,9 +65,16 @@ const BusinessPlan = () => {
           <div className={styles.BoothLottie}>
             <Lottie options={defaultOptions} height={250} width={250} />
           </div>
-          <h1 style={{ color: "white", fontSize: "1rem", textAlign: "center" }}>
-            Loading Content...
-          </h1>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString('<span style="color: white;">Loading . . . </span>')
+                .start()
+                .pauseFor(2500)
+                .deleteAll()
+                .start();
+            }}
+          />
         </div>
       ) : (
         <motion.div
